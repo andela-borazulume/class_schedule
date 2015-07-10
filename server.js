@@ -21,9 +21,9 @@ thinky.r.connect(development.rethinkdb);
 routes(app, development);
 
 
-// app.get('/*', function(req, res) {
-// 	res.sendFile('index.html', {root: './public'});
-// });
+app.get('/*', function(req, res) {
+	res.sendFile('index.html', {root: './public'});
+});
 
 var port = process.env.PORT || 2000;
 app.listen(port);

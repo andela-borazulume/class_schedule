@@ -66,6 +66,16 @@ module.exports = function(app, development) {
     });
   });
 
+  app.route('/depts/:deptId/year/:yearId')
+  .get(function(req, res, err) {
+      if(req.year) {
+        res.json(req.year);
+      }
+      else {
+        res.status(400).json(err);
+      }
+    });
+
   app.param('yearId', function(req, res, next, id){
     Year.get(id).getJoin().run().then(function(data) {
       req.year = data;

@@ -1,0 +1,25 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo left">ADMIN</a>
+  </div>
+</nav>       
+<div>
+	<h5>View Departments</h5>
+
+	<a class="btn-large changeColor" ng-click="getData()">Departments</a>
+<div >
+		<ul class="collection with-header" ng-repeat="depts in getDepartments">
+	      <li class="collection-item">
+	      	<div><Button ng-click="getOneDept(depts.id)">{{depts.dept_name}}</Button>
+	      		<i class="material-icons" ng-click="deleteDept(depts.id, $index)">delete</i>
+	      	</div>
+	      </li>
+		</ul>
+</div>	
+<h6>Add departments</h6>
+		<input type="text" ng-model="inputDept"><input type="submit" ng-click="createDept()">
+</div>
+<div>
+	<h5>{{eachDept.dept_name}}</h5>
+		Add year:<input type="text" ng-model="inputYear"><input type="submit" ng-click="createYear()">
+</div>
