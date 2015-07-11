@@ -1,6 +1,6 @@
 'use strict';
 angular.module('app').
-	controller('adminCtrl', ['$scope', 'Departments', '$routeParams', function ($scope, Departments, $routeParams) {
+	controller('adminCtrl', ['$scope', 'Departments', 'Lecturers', 'Courses', '$routeParams', '$timeout', function ($scope, Departments, Lecturers, Courses, $routeParams, $timeout) {
 
 		$scope.getData = function() {
 			var allDepts = Departments.DeptList.query(function() {
@@ -31,16 +31,54 @@ angular.module('app').
 				}
 			});
 		$scope.getData();	
+		$scope.inputDept = "";
 		};
 
 		$scope.getOneDept = function(id) {
 			var dept = Departments.DeptList.get({ depts_id: id }, function() {	
 				$scope.eachDept = dept;
-				console.log(dept);
+				// console.log(dept);
   		});
 		};
 
-		$scope.createYear = function() {
+		$scope.list = Lecturers.query();
+
+		$scope.addLecturersTOList = function() {
+			var lecturer = new Lecturers({
+				lecturer_name: $scope.addLecturer
+			});
+
+			lecturer.$save(function(err, data) {
+				if(err) {
+					console.log(err);
+				}
+			});
+			$scope.addLecturer = "";
+			$scope.list = Lecturers.query();
 		};
+
+		$scope.DetailsAdded = {};
+
+		$scope.saveDetails = function() {
+		var query = $routeParams.deptId;
+			Courses.GetDeptWithCourses(query, $scope.DetailsAdded, function(data, err) {
+	        if (data) {
+	            // $scope.showPost();
+	            console.log(data);
+	            // console.log($scope.categorypost.posts);
+	        } else if (err) {
+	            console.log(err);
+	            // alert('You have to	 login first');
+	        }
+	    });
+		};
+
+		 $(document).ready(function(){
+   		 $('.modal-trigger').leanModal({
+   		 		in_duration: 500, // Transition in duration
+      		out_duration: 300
+   		 });
+  	});
+
 
 	}]);

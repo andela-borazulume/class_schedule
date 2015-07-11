@@ -1,5 +1,5 @@
 h5 {
-	margin-left: 100px !important;
+	text-align: center;
 }
 
 .nav-wrapper {
@@ -9,8 +9,36 @@ h5 {
 .btn-large {
 	height: 150px;
 	width: 300px;
-	margin-left: 100px;
+	margin-left:38%;
 }
-.changeColor {
-	background-color: #382E2C;
+#addBtn {
+	  margin-top: -150px;
+  margin-left: 72em;
+}
+.icon{
+	height: 15px;
+	width: 15px;
+	float: right;
+}
+.icon1 {
+	height: 15px;
+	width: 15px;
+	margin-left: 43em;
+}
+#plusIcon {
+	height: 30px;
+	width: 30px;
+	float: right;
+}
+.collectionSize {
+	width: 50em;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#modal1 {
+	max-height: 70%;
+  width: 50em;
+  margin: auto;
+  margin-bottom: 100px;
 }

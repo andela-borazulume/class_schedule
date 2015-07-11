@@ -1,0 +1,76 @@
+<table class="hoverable">
+  <thead>
+    <tr>
+        <th data-field="id">Year</th>
+        <th data-field="name">Course Name</th>
+        <th data-field="name">Course Code</th>
+        <th data-field="name">Location</th>
+        <th data-field="name">Time</th>
+        <th data-field="price">Lecturer</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Alvin</td>
+      <td>Eclair</td>
+      <td>$0.87</td>
+    </tr>
+    <tr>
+      <td>Alan</td>
+      <td>Jellybean</td>
+      <td>$3.76</td>
+    </tr>
+    <tr>
+      <td>Jonathan</td>
+      <td>Lollipop</td>
+      <td>$7.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<a id="addBtn" class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Add Details</h4>
+      <label>Course-code</label>
+      <input type="text" class="validate" ng-model="DetailsAdded.course_code">
+
+      <label>Course-name</label>
+      <input type="text" class="validate" ng-model="DetailsAdded.course_name">
+
+      <label for="inputCreated">Time of Lecturer</label>
+      <input type="date" class="datepicker" ng-model="DetailsAdded.time">
+      
+      <label>Location of lecture</label>
+      <input type="text" class="validate" ng-model="DetailsAdded.location">
+
+      <label>Year</label>
+        <select class="browser-default" ng-model="DetailsAdded.location">
+          <option value="" disabled selected>Choose year</option>
+          <option value="1">1st-year</option>
+          <option value="2">2nd-year</option>
+          <option value="2">3rd-year</option>
+          <option value="3">4th-year</option>
+          <option value="3">5th-year</option>
+        </select>
+
+        <label>Lecturer-In-Charge</label>
+        <select class="browser-default" ng-model="DetailsAdded.lecturer">
+          <option value="" disabled selected>Choose Lecturer</option>
+          <option ng-repeat="lecturer in list">{{lecturer.lecturer_name}}</option>
+        </select>
+        <img id="plusIcon" src="images/plus.png" ng-click="showForm = !showForm">
+        <div ng-show="showForm">
+          <label>Add lecture</label>
+          <input type="text" class="validate" ng-model="addLecturer">
+          <a class="waves-effect waves-light btn" ng-click="addLecturersTOList()" ng-click="showForm = !showForm">Add</a>
+        </div>
+    </div>
+
+
+    <div class="modal-footer">
+      <a href="#/admin/dept" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="saveDetails()">Save</a>
+      <a href="#/admin/dept" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>

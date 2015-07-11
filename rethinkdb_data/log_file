@@ -62,3 +62,40 @@
 2015-07-11T11:19:34.805543000 2.522023s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
 2015-07-11T11:19:34.805548000 2.522029s notice: Server ready, "macs_MacBook_Pro_local_5k6" e1bf9eb5-6dbd-4f55-af4c-7d90b67ced5d
 2015-07-11T11:19:36.112371000 3.828940s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-07-11T11:23:01.689126000 209.414219s notice: Server got SIGINT from pid 1056, uid 503; shutting down...
+2015-07-11T11:23:01.872862000 209.597958s notice: Shutting down client connections...
+2015-07-11T11:23:01.872985000 209.598081s notice: All client connections closed.
+2015-07-11T11:23:01.872990000 209.598085s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-07-11T11:23:02.136304000 209.861400s notice: Storage engine shut down.
+2015-07-11T11:30:06.627355000 0.720532s notice: Running rethinkdb 2.0.1 (CLANG 4.2 (clang-425.0.28))...
+2015-07-11T11:30:06.769581000 0.862755s notice: Running on Darwin 14.0.0 x86_64
+2015-07-11T11:30:06.769626000 0.862799s notice: Loading data from directory /Users/andela/workspace/Class_schdeule/rethinkdb_data
+2015-07-11T11:30:07.653285000 1.746502s info: Automatically using cache size of 100 MB
+2015-07-11T11:30:07.653298000 1.746515s warn: Cache size is larger than available memory.
+2015-07-11T11:30:07.653314000 1.746531s warn: Cache size is very low and may impact performance.
+2015-07-11T11:30:07.683864000 1.777081s notice: Listening for intracluster connections on port 29015
+2015-07-11T11:30:07.718796000 1.812013s notice: Listening for client driver connections on port 28015
+2015-07-11T11:30:07.718916000 1.812133s notice: Listening for administrative HTTP connections on port 8080
+2015-07-11T11:30:07.718918000 1.812134s notice: Listening on addresses: 127.0.0.1, ::1
+2015-07-11T11:30:07.718922000 1.812139s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-07-11T11:30:07.718923000 1.812140s notice: Server ready, "macs_MacBook_Pro_local_5k6" e1bf9eb5-6dbd-4f55-af4c-7d90b67ced5d
+2015-07-11T11:30:08.268938000 2.362199s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-07-11T20:13:11.720311000 28733.117719s error: accept() failed: Too many open files in system.
+2015-07-11T20:13:50.046440000 28771.444820s notice: Server got SIGINT from pid 1056, uid 503; shutting down...
+2015-07-11T20:13:50.073555000 28771.471936s notice: Shutting down client connections...
+2015-07-11T20:13:50.131131000 28771.529512s notice: All client connections closed.
+2015-07-11T20:13:50.131144000 28771.529524s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-07-11T20:13:51.136363000 28772.534793s notice: Storage engine shut down.
+2015-07-11T20:14:13.658719000 0.899471s notice: Running rethinkdb 2.0.1 (CLANG 4.2 (clang-425.0.28))...
+2015-07-11T20:14:13.700166000 0.940915s notice: Running on Darwin 14.0.0 x86_64
+2015-07-11T20:14:13.700219000 0.940967s notice: Loading data from directory /Users/andela/workspace/Class_schdeule/rethinkdb_data
+2015-07-11T20:14:15.255875000 2.496672s info: Automatically using cache size of 100 MB
+2015-07-11T20:14:15.255888000 2.496684s warn: Cache size is larger than available memory.
+2015-07-11T20:14:15.255894000 2.496691s warn: Cache size is very low and may impact performance.
+2015-07-11T20:14:15.291524000 2.532320s notice: Listening for intracluster connections on port 29015
+2015-07-11T20:14:15.337148000 2.577946s notice: Listening for client driver connections on port 28015
+2015-07-11T20:14:15.337405000 2.578202s notice: Listening for administrative HTTP connections on port 8080
+2015-07-11T20:14:15.337416000 2.578213s notice: Listening on addresses: 127.0.0.1, ::1
+2015-07-11T20:14:15.337426000 2.578222s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-07-11T20:14:15.337431000 2.578228s notice: Server ready, "macs_MacBook_Pro_local_5k6" e1bf9eb5-6dbd-4f55-af4c-7d90b67ced5d
+2015-07-11T20:14:16.763628000 4.004425s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.

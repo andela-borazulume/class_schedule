@@ -45,28 +45,51 @@ module.exports = function(app, development) {
       });
     });
 
-  app.route('/courses/:courseId/lecturers')
-  .get(function(req, res) {
-    Lecturer.run().then(function(data) {
-      res.json(data);
-    }).error(function(err) {
-      res.status(400).json(err);
-    });
-  })
-  .post(function(req, res) {
-    var lecturers = new Lecturer({
-      lecturer_name: req.body.lecturer_name,
-      day: req.body.day,
-      location: req.body.location,
-      time: req.body.time,
-      course_id: req.params.courseId
-    });
-    lecturers.saveAll().then(function(data) {
-      res.json(data);
-    }).error(function(err) {
-      res.status(400).json(err);
-    });
-  });
+  // app.route('/courses/:courseId/lecturers')
+  // .get(function(req, res) {
+  //   Lecturer.run().then(function(data) {
+  //     res.json(data);
+  //   }).error(function(err) {
+  //     res.status(400).json(err);
+  //   });
+  // })
+  // .post(function(req, res) {
+  //   var lecturers = new Lecturer({
+  //     lecturer_name: req.body.lecturer_name,
+  //     day: req.body.day,
+  //     location: req.body.location,
+  //     time: req.body.time,
+  //     course_id: req.params.courseId
+  //   });
+  //   lecturers.saveAll().then(function(data) {
+  //     res.json(data);
+  //   }).error(function(err) {
+  //     res.status(400).json(err);
+  //   });
+  // });
+
+  // app.route('/depts/:deptId/year/:yearId/courses/:courseId/lecturers')
+  // .get(function(req, res) {
+  //   Lecturer.run().then(function(data) {
+  //     res.json(data);
+  //   }).error(function(err) {
+  //     res.status(400).json(err);
+  //   });
+  // })
+  // .post(function(req, res) {
+  //   var lecturers = new Lecturer({
+  //     lecturer_name: req.body.lecturer_name,
+  //     day: req.body.day,
+  //     location: req.body.location,
+  //     time: req.body.time,
+  //     course_id: req.params.courseId
+  //   });
+  //   lecturers.saveAll().then(function(data) {
+  //     res.json(data);
+  //   }).error(function(err) {
+  //     res.status(400).json(err);
+  //   });
+  // });
 
   app.param('lecturerId', function(req, res, next, id){
     Lecturer.get(id).getJoin().run().then(function(data) {

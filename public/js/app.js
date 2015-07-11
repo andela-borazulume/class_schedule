@@ -7,11 +7,15 @@ angular.module('app', [
 		// $locationProvider.html5Mode(true);
 		$routeProvider
 			.when('/admin', {
-				templateUrl: 'view/homeView.html',
+				templateUrl: 'view/adminView.html',
 				controller: 'homeCtrl'
 		  })
 		  .when('/admin/dept', {
-		  	templateUrl: 'view/adminView.html',
+		  	templateUrl: 'view/deptView.html',
+		  	controller: 'adminCtrl'
+		  })
+		  .when('/admin/dept/:deptId', {
+		  	templateUrl: 'view/updateView.html',
 		  	controller: 'adminCtrl'
 		  })
 		  .otherwise({

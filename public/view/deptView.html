@@ -1,0 +1,30 @@
+<div>
+	<h5>Select Department</h5>
+
+	<a class="btn-large changeColor" ng-click="getData()">Departments</a>
+<div class="collectionSize">
+	<ul class="collection with-header" ng-repeat="depts in getDepartments">
+    <li class="collection-item">
+    	{{depts.dept_name}}
+    	<a ng-href="#/admin/dept/{{depts.id}}"><img class="icon1" src="images/edit.png"></a>
+    	<a class="tooltipped" data-position="right" data-delay="50" data-tooltip="I am tooltip">
+    		<img class="icon" src="images/delete.png" ng-click="deleteDept(depts.id, $index)"></a>
+    </li>
+	</ul>
+</div>
+
+<a id="addBtn" class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add</i></a>	
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Add Department</h4>
+      <input type="text" ng-model="inputDept">
+    </div>
+    <div class="modal-footer">
+      <a href="#/admin/dept" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="createDept()">Save</a>
+      <a href="#/admin/dept" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
+
+
+
+

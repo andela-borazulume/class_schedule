@@ -46,7 +46,7 @@ module.exports = function(app, development) {
     });
 
 
-  app.route('/year/:yearId/courses')
+  app.route('/depts/:deptId/courses')
   .get(function(req, res) {
     Course.run().then(function(data) {
       res.json(data);
@@ -57,7 +57,12 @@ module.exports = function(app, development) {
   .post(function(req, res) {
     var courses = new Course({
       course_name: req.body.course_name,
-      year_id: req.params.yearId
+      level: req.body.level,
+      course_code: req.body.course_code,
+      time: req.body.time,
+      location: req.body.location,
+      lecturer: String,
+      dept_id: req.params.deptId,
     });
     courses.saveAll().then(function(data) {
       res.json(data);

@@ -5,6 +5,6 @@ var Departments = thinky.createModel('Departments', {
 	dept_name: String,
 });
 
-Departments.hasMany(Year, 'year', 'id', 'dept_id');
-Year.belongsTo(Departments, 'department', 'dept_id', 'id');
+// Departments.hasMany(Year, 'year', 'id', 'dept_id');
+// Year.belongsTo(Departments, 'department', 'dept_id', 'id');
 module.exports = Departments;
