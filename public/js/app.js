@@ -6,15 +6,15 @@ angular.module('app', [
 	]).config(['$routeProvider', function($routeProvider) {
 		// $locationProvider.html5Mode(true);
 		$routeProvider
-			.when('/home', {
+			.when('/admin', {
 				templateUrl: 'view/homeView.html',
 				controller: 'homeCtrl'
 		  })
-		  .when('/admin', {
+		  .when('/admin/dept', {
 		  	templateUrl: 'view/adminView.html',
 		  	controller: 'adminCtrl'
 		  })
 		  .otherwise({
-		  	redirectTo: '/'
+		  	redirectTo: '/admin'
 		  });
 	}]);
