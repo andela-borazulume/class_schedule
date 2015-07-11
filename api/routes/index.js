@@ -10,7 +10,7 @@ module.exports = function(app, development) {
 	// year(app, development);
 
 	app.get('/*', function(req, res) {
-		// res.sendFile('index.html', {root: './public'});
+		res.sendFile('index.html', {root: './public'});
 		console.log('Everywhere');
 	});
 };
