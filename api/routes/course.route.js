@@ -56,6 +56,7 @@ module.exports = function(app, development) {
   })
   .post(function(req, res) {  
     console.log(req.body);
+    console.log(req.params);
     var courses = new Course({
       course_name: req.body.course_name,
       level: req.body.level,
@@ -63,7 +64,7 @@ module.exports = function(app, development) {
       time: req.body.time,
       location: req.body.location,
       lecturer: req.body.lecturer,
-      dept_id: req.params.dept_id
+      dept_id: req.params.deptId
     });
     courses.saveAll().then(function(data) {
       res.json(data);

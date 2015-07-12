@@ -6,7 +6,7 @@
 	<ul class="collection with-header" ng-repeat="depts in getDepartments">
     <li class="collection-item">
     	{{depts.dept_name}}
-    	<a ng-href="#/admin/dept/{{depts.id}}"><img class="icon1" src="images/edit.png"></a>
+    	<a ng-href="#/admin/dept/{{depts.id}}" ><img class="icon1" src="images/edit.png"></a>
     	<a class="tooltipped" data-position="right" data-delay="50" data-tooltip="I am tooltip">
     		<img class="icon" src="images/delete.png" ng-click="deleteDept(depts.id, $index)"></a>
     </li>

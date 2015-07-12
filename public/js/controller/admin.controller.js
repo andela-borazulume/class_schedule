@@ -35,11 +35,14 @@ angular.module('app').
 		};
 
 		$scope.getOneDept = function(id) {
+			console.log("let us see the department");
 			var dept = Departments.DeptList.get({ depts_id: id }, function() {	
 				$scope.eachDept = dept;
-				// console.log(dept);
-  		});
+				console.log($scope.eachDept);
+				
+  			});
 		};
+        $scope.getOneDept($routeParams.deptId);
 
 		$scope.list = Lecturers.query();
 
@@ -59,19 +62,21 @@ angular.module('app').
 
 		var query = $routeParams.deptId;
 
-		$scope.getCourseDetails = function () {
-			var query = $routeParams.deptId;
-			Courses.GetDeptCourses(query, function(data) {
-				$scope.course = data;
-			});
-		}();
+		// $scope.getCourseDetails = function () {
+		// 	var query = $routeParams.deptId;
+		// 	Courses.GetDeptCourses(query, function(data) {
+		// 		$scope.course = data;
+		// 	});
+		// }();
 		$scope.DetailsAdded = {};
 
 		$scope.saveDetails = function() {
-			console.log($scope.DetailsAdded);
+			// console.log($scope.DetailsAdded);
+
 			Courses.CreateDeptCourses(query, $scope.DetailsAdded, function(data, err) {
+				console.log("this is the depts params id", query);
 		        if (data) {
-		            // console.log(data);
+		            console.log("data back form teh ack",data);
 		        } else if (err) {
 		            console.log(err);
 		        }
