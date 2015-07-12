@@ -11,6 +11,6 @@ var Courses = thinky.createModel('Courses', {
 	lecturer: String
 });
 
-Courses.hasMany(Lecturers, 'lecturer', 'id', 'course_id');
-Lecturers.belongsTo(Courses, 'course', 'course_id', 'id');
+// Courses.hasMany(Lecturers, 'lecturer', 'id', 'course_id');
+// Lecturers.belongsTo(Courses, 'course', 'course_id', 'id');
 module.exports = Courses;

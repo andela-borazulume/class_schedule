@@ -54,15 +54,16 @@ module.exports = function(app, development) {
       res.status(400).json(err);
     });
   })
-  .post(function(req, res) {
+  .post(function(req, res) {  
+    console.log(req.body);
     var courses = new Course({
       course_name: req.body.course_name,
       level: req.body.level,
       course_code: req.body.course_code,
       time: req.body.time,
       location: req.body.location,
-      lecturer: String,
-      dept_id: req.params.deptId,
+      lecturer: req.body.lecturer,
+      dept_id: req.params.dept_id
     });
     courses.saveAll().then(function(data) {
       res.json(data);

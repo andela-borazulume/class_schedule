@@ -11,20 +11,13 @@
   </thead>
 
   <tbody>
-    <tr>
-      <td>Alvin</td>
-      <td>Eclair</td>
-      <td>$0.87</td>
-    </tr>
-    <tr>
-      <td>Alan</td>
-      <td>Jellybean</td>
-      <td>$3.76</td>
-    </tr>
-    <tr>
-      <td>Jonathan</td>
-      <td>Lollipop</td>
-      <td>$7.00</td>
+    <tr ng-repeat = "course in course">
+      <td>{{course.level}}</td>
+      <td>{{course.course_name}}</td>
+      <td>{{course.course_code}}</td>
+      <td>{{course.location}}</td>
+      <td>{{course.time}}</td>
+      <td>{{course.lecturer}}</td>
     </tr>
   </tbody>
 </table>
@@ -46,13 +39,13 @@
       <input type="text" class="validate" ng-model="DetailsAdded.location">
 
       <label>Year</label>
-        <select class="browser-default" ng-model="DetailsAdded.location">
+        <select class="browser-default" ng-model="DetailsAdded.level">
           <option value="" disabled selected>Choose year</option>
-          <option value="1">1st-year</option>
-          <option value="2">2nd-year</option>
-          <option value="2">3rd-year</option>
-          <option value="3">4th-year</option>
-          <option value="3">5th-year</option>
+          <option value="1st-year">1st-year</option>
+          <option value="2nd-year">2nd-year</option>
+          <option value="3rd-year">3rd-year</option>
+          <option value="4th-year">4th-year</option>
+          <option value="5th-year">5th-year</option>
         </select>
 
         <label>Lecturer-In-Charge</label>

@@ -1,5 +1,5 @@
 {
-  "name": "rethinkDB",
+  "name": "class-schedule",
   "main": "server.js",
   "dependencies": {
     "body-parser": "~1.0.1",

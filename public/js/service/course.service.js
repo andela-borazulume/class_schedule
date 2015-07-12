@@ -1,13 +1,15 @@
 angular.module('app')
-	.factory('Courses', ['$resource', function($resource) {
+	.factory('Courses', ['$resource', '$http', function($resource, $http) {
 		return {
-			GetCourses: function() {
-				$resource('courses/:course_id', null, {
+			GetCourses: $resource('courses/:course_id', null, {
 					'update': {method: 'PUT'}
-				});
-			},
-			GetDeptWithCourses: function(query, data, callback) {
+				}),
+			CreateDeptCourses: function(query, data, callback) {
 				return $http.post('/depts/'+query+'/courses', data)
+				.success(callback);
+			},
+			GetDeptCourses: function(query, callback) {
+				return $http.get('/depts/'+query+'/courses')
 				.success(callback);
 			}
 		};

@@ -57,20 +57,26 @@ angular.module('app').
 			$scope.list = Lecturers.query();
 		};
 
+		var query = $routeParams.deptId;
+
+		$scope.getCourseDetails = function () {
+			var query = $routeParams.deptId;
+			Courses.GetDeptCourses(query, function(data) {
+				$scope.course = data;
+			});
+		}();
 		$scope.DetailsAdded = {};
 
 		$scope.saveDetails = function() {
-		var query = $routeParams.deptId;
-			Courses.GetDeptWithCourses(query, $scope.DetailsAdded, function(data, err) {
-	        if (data) {
-	            // $scope.showPost();
-	            console.log(data);
-	            // console.log($scope.categorypost.posts);
-	        } else if (err) {
-	            console.log(err);
-	            // alert('You have to	 login first');
-	        }
-	    });
+			console.log($scope.DetailsAdded);
+			Courses.CreateDeptCourses(query, $scope.DetailsAdded, function(data, err) {
+		        if (data) {
+		            // console.log(data);
+		        } else if (err) {
+		            console.log(err);
+		        }
+	    	});
+			$scope.getCourseDetails();
 		};
 
 		 $(document).ready(function(){
