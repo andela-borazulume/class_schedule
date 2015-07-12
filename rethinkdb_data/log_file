@@ -117,3 +117,17 @@
 2015-07-11T23:58:49.719125000 3.413007s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
 2015-07-11T23:58:49.719134000 3.413016s notice: Server ready, "macs_MacBook_Pro_local_5k6" e1bf9eb5-6dbd-4f55-af4c-7d90b67ced5d
 2015-07-11T23:58:50.741755000 4.435638s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-07-12T22:02:29.121530000 0.036905s notice: Recursively removing directory /Users/olalekansogunle/workspace/class_schedule/rethinkdb_data/tmp
+2015-07-12T22:02:29.122670000 0.038049s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2015-07-12T22:02:29.145282000 0.060658s notice: Running on Darwin 14.0.0 x86_64
+2015-07-12T22:02:29.145334000 0.060708s notice: Loading data from directory /Users/olalekansogunle/workspace/class_schedule/rethinkdb_data
+2015-07-12T22:02:29.211270000 0.126644s info: Automatically using cache size of 100 MB
+2015-07-12T22:02:29.211288000 0.126662s warn: Cache size does not leave much memory for server and query overhead (available memory: 531 MB).
+2015-07-12T22:02:29.211294000 0.126668s warn: Cache size is very low and may impact performance.
+2015-07-12T22:02:29.212854000 0.128228s notice: Listening for intracluster connections on port 29015
+2015-07-12T22:02:29.215830000 0.131205s notice: Listening for client driver connections on port 28015
+2015-07-12T22:02:29.215945000 0.131319s notice: Listening for administrative HTTP connections on port 8080
+2015-07-12T22:02:29.215949000 0.131323s notice: Listening on addresses: 127.0.0.1, 127.94.0.1, 127.94.0.2, ::1
+2015-07-12T22:02:29.215950000 0.131324s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-07-12T22:02:29.215954000 0.131328s notice: Server ready, "macs_MacBook_Pro_local_5k6" e1bf9eb5-6dbd-4f55-af4c-7d90b67ced5d
+2015-07-12T22:02:30.197200000 1.112511s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
