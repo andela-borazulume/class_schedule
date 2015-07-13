@@ -72,6 +72,33 @@ module.exports = function(app, development) {
       res.status(400).json(err);
     });
   });
+  
+  app.route('/depts/:deptId/courses/:courseId')
+    .get(function(req, res, err) {
+      if(req.courses) {
+        res.json(req.courses);
+      }
+      else {
+        res.status(400).json(err);
+      }
+    })
+    .put(function(req, res) {
+      var courses = req.courses;
+      courses = _.extend(courses, req.body);
+      courses.saveAll().then(function(data) {
+        res.json(data);
+      }).error(function(err) {
+        res.status(500).send('Error has occured');
+      });
+    })
+    .delete(function(req, res) {
+      var courses = req.courses;
+      courses.deleteAll().then(function(data) {
+        res.json(data);
+      }).error(function(err) {
+        res.status(500).send('Error has occured');
+      });
+    });
 
   app.param('courseId', function(req, res, next, id){
     Course.get(id).getJoin().run().then(function(data) {
