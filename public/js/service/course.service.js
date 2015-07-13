@@ -11,6 +11,10 @@ angular.module('app')
 			GetDeptCourses: function(query, callback) {
 				return $http.get('/depts/'+query+'/courses')
 				.success(callback);
+			},
+			DeleteDeptCourses: function(query, query2, callback) {
+				return $http.delete('/depts/'+query+'/courses'+query)
+				.success(callback);
 			}
 		};
 		

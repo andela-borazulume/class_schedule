@@ -8,17 +8,22 @@
         <th data-field="name">Location</th>
         <th data-field="name">Time</th>
         <th data-field="price">Lecturer</th>
+        <th data-field="delete">Update and Delete</th>
     </tr>
   </thead>
 
   <tbody>
-    <tr ng-repeat = "course in eachDept.course">
+    <tr ng-repeat = "course in eachDept">
       <td>{{course.level}}</td>
       <td>{{course.course_name}}</td>
       <td>{{course.course_code}}</td>
       <td>{{course.location}}</td>
       <td>{{course.time}}</td>
       <td>{{course.lecturer}}</td>
+      <td>
+      <a ng-href="#/admin/dept/{{depts.id}}" class="modal-trigger"><img class="updateCourseIcon" src="images/edit.png"></a>
+      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="I am tooltip">
+        <img class="deleteCourseIcon" src="images/delete.png" ng-click="deleteCourse(course.id, $index)"></a></td>
     </tr>
   </tbody>
 </table>
@@ -64,7 +69,7 @@
 
 
     <div class="modal-footer">
-      <a href="#/admin/dept" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="saveDetails()">Save</a>
+      <a href="#/admin/dept/{{course.dept_id}}" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="saveDetails()">Save</a>
       <a href="#/admin/dept" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
     </div>
   </div>

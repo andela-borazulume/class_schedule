@@ -25,6 +25,14 @@ h5 {
 	width: 15px;
 	margin-left: 43em;
 }
+.updateCourseIcon {
+	height: 15px;
+	width: 15px;
+}
+.deleteCourseIcon {
+	height: 15px;
+	width: 15px;
+}
 #plusIcon {
 	height: 30px;
 	width: 30px;
